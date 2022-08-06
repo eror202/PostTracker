@@ -1,14 +1,17 @@
 package ru.smirnov.PostOffice.PostOffice.DTO;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RecipientsDTO {
+    @JsonProperty("index")
     private int index;
-
+    @JsonProperty("address")
     private String address;
-
+    @JsonProperty("name")
     private String name;
-
+    @JsonProperty("isDelivered")
     private boolean isDelivered;
-
+    @JsonProperty("identification")
     private int identification;
 
     public int getIndex() {

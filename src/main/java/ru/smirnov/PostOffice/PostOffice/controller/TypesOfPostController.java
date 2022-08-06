@@ -40,8 +40,8 @@ public class TypesOfPostController {
     }
 
     @GetMapping("/getAllPostsByType")
-    public TypesOfPostResponse getAllByType(String type){
-        return new TypesOfPostResponse(typesOfPostService.findByType(type).stream()
+    public TypesOfPostResponse getAllByType(){
+        return new TypesOfPostResponse(typesOfPostService.findAll().stream()
                 .map(this::convertToTypesOfPostDTO).collect(Collectors.toList()));
     }
 
